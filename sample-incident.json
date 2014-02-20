@@ -1,0 +1,91 @@
+{
+    "CaseNo": 2013028707,
+    "Location": {
+        "BlockNo": "4700-BLK",
+        "StreetDir": 0,
+        "Street": "BROAD ST",
+        "City": "VIRGINIA BEACH",
+        "State": "VA",
+        "Zip": 23462,
+        "Zone": 323,
+        "Neighborhood": "PEMBROKE SQUARE APTS IN ARAGONA VILLAGE"
+    },
+    "ReportDate": "7/2/2013 1:16:00 AM",
+    "LastKnownSecure": "7/2/2013",
+    "AtFound": "7/2/2013 12:30:00 AM",
+    "ReportingOfficer": "BAILEY, K. N.",
+    "Supervisor": "FORD, D. S.",
+    "InvestigatingOfficer": "JOHNSTON, K. E.",
+    "CaseStatus": "ACTIVE - PENDING",
+    "CaseStatusDate": "7/2/2013",
+    "DispositionStatus": {},
+    "DispositionDate": {},
+    "Crimes": {
+        "Crime": {
+            "CrimeSeqNumber": 1,
+            "CrimeDescription": "BURGLARY/ B&E, RESIDENTIAL",
+            "CrimeCode": "220A",
+            "AttemptedOrCompleted": "Completed",
+            "Premise": "RESIDENCE, MULTI-FAMILY DWELLI",
+            "HowLeftScene": {},
+            "Entry_Info": {
+                "Entry": ["FRONT", "DOOR"]
+            },
+            "Exit_Info": {},
+            "SecurityType_Info": {},
+            "CriminalActivity_Info": {},
+            "WeaponTools_Info": {},
+            "BiasMotivation": "NONE (NO BIAS)"
+        }
+    },
+    "ModusOperandi": {
+        "MethodOfEntry": "UNKNOWN"
+    },
+    "VictimsAndOthersInvolved": {
+        "VictimAndOthersInvolved": [{
+            "SequenceNumber": [1, 1],
+            "InvolvementCode": "VI",
+            "Type": "INDIVIDUAL",
+            "Name": "Restricted",
+            "Injuries": {},
+            "VictimOfCrimes": 1,
+            "WillProsecute": "Y",
+            "Age": {},
+            "Sex": {},
+            "RaceCode": {}
+        }, {
+            "SequenceNumber": [1, 1],
+            "InvolvementCode": "CO",
+            "Type": "INDIVIDUAL",
+            "Name": "Restricted",
+            "Injuries": {},
+            "VictimOfCrimes": 1,
+            "WillProsecute": "Y",
+            "Age": {},
+            "Sex": {},
+            "RaceCode": {}
+        }]
+    },
+    "Properties": {
+        "Property": {
+            "Type": "PURSE/HANDBAG/WALLET",
+            "Statuses": 7,
+            "Value": "$400.00",
+            "RecoveredValue": "$0.00",
+            "Quantity": 1,
+            "Unit": 0,
+            "Description": {
+                "GeneralDesc": "TRAVEL BAG",
+                "Make": 0,
+                "Model": 0,
+                "SerialNumber": 0
+            }
+        },
+        "TotalStolenValue": "$400.00",
+        "TotalRecoveredValue": "$0.00",
+        "Note": "'Value' is $1 if Unknown. 'Recovered Value' displays value of property based on the condition at the time of recovery"
+    },
+    "Vehicles": {
+        "Note": "No RELATED VEHICLES"
+    }
+}
