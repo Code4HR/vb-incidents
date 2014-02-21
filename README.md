@@ -1,8 +1,18 @@
 vb-incidents
 ============
 
-##Pulling data from Virginia Beach ePro app of police incidents, for testing new ways to display or search that data.##
+### A utility for pulling data from Virginia Beach ePro app of police incidents. Then use that data for testing new ways to display or search.
 
+What this Node.js App Does (or will do when working)
+===================================================
+ * Pulls VB incident data for a range of dates
+ * Converts from SOAP (XML) to JSON
+ * Imports into a local mongodb for you to hack against
+ * Data samples included in root of repo
+ * Assuming you have Node.js installed, run `npm install` to add modules, then run with `node app.js`
+
+Existing VB Incidents Data
+==========================
  * Web GUI: https://wwws.vbgov.com/ePRO/MainUI/Incidents/IncidentSearch.aspx
  * API endpoint: https://public.vbgov.com/Secure/service.asmx?op=GetIncidentData
  * Case Number format: YYYY123456. YYYY represents the year (e.g. 2006) followed by a 6-digit number. Do not include spaces or dashes.
