@@ -10,14 +10,21 @@ var moment = require('moment'),
 
 function convertArrayToValue(obj) {
     "use strict";
-    _.each(obj, function (prop, propName) {
-        if (_.isArray(prop)) {
-            if (prop.length === 1) {
-                obj[propName] = prop[0];
+    if (_.isString(obj)) {
+        obj = obj.trim();
+    } else {
+        _.each(obj, function (prop, propName) {
+            if (_.isArray(prop)) {
+                if (prop.length <= 1) {
+                    obj[propName] = prop[0];
+                    if (_.isString(obj[propName])) {
+                        obj[propName] = obj[propName].trim();
+                    }
+                }
             }
             convertArrayToValue(obj[propName]);
-        }
-    });
+        });
+    }
 }
 
 function processDate(dateToProcess, collection) {
@@ -41,9 +48,6 @@ function processDate(dateToProcess, collection) {
                 _.each(realIncidents, function (val) {
                     convertArrayToValue(val);
                 });
-
-                console.log("got data for " + dateToProcess);
-
                 collection.insert(realIncidents, function (err, docs) {
                     console.log("end " + dateToProcess);
                     defer.resolve();
