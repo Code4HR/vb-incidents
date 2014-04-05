@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1.
+		Incidents By Zip Code
+	p 
+	table
+		thead
+			tr
+				th(class='col-md-2') Zip Code
+				th(class='col-md-2') Incidents
+		tbody
+			each incident, i in incidents
+				tr(class=(i % 2 == 0) ? 'dataTableOdd' : 'dataTableEven')
+					td(class='col-md-2')
+						a(href='https://www.google.com/maps/place/Virginia+Beach,+VA+' + incident._id target="_blank") #{incident._id}
+					td(class='col-md-2') #{incident.count}

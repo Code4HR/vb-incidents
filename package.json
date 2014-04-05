@@ -10,7 +10,12 @@
     "moment": "^2.5.1",
     "q": "^1.0.0",
     "soap": "^0.4.0",
-    "lodash": "^2.4.1"
+    "lodash": "^2.4.1",
+	'mongoskin': '*',
+    "express": "*",
+    "jade": "*",
+    "stylus": "*",	
+	"nib": "*"
   },
   "devDependencies": {},
   "scripts": {
