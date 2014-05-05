@@ -43,7 +43,7 @@ Limitations of API
  * Incidents are often modified after they are created, so there is no way to intelligently return data that has been updated.
  * It may be necessary to cache the data in a local storage mechanism for more flexable searching and data display, but there's no easy way to get any modified data to keep replica in sync with current.  
  * A single query to the API took up to 6 seconds in testing.
- * Data only goes back to 1/1/2011.
+ * Data only goes back to 1/1/2012.
  
 Limitations of Import Routine
 ===================================================
