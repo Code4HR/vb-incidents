@@ -1,0 +1,22 @@
+extends layout
+	
+block content
+	h1.
+		Incident Data
+	p 
+	| Returing 50 newest incidents out of #{totalIncidents}.
+	| <a href="/incidents_by_zip_code">View</a> incidents by zip code.
+	table
+		thead
+			tr
+				th(class='col-md-2') Reported
+				th(class='col-md-3') Crime
+				th(class='col-md-3') Neighborhood
+				th(class='col-md-4') Location
+		tbody
+			each incident, i in incidents
+				tr(class=(i % 2 == 0) ? 'dataTableOdd' : 'dataTableEven')
+					td(class='col-md-2') #{moment(incident.ReportDate).format("YYYY-MM-DD HH:mm")}
+					td(class='col-md-3') #{incident.Crimes.Crime.CrimeDescription}
+					td(class='col-md-3') #{incident.Location.Neighborhood}
+					td(class='col-md-4') #{incident.Location.BlockNo} #{incident.Location.Street}, #{incident.Location.City}

@@ -1,0 +1,36 @@
+extends layout
+
+block append head
+	script(type="text/javascript" src="https://www.google.com/jsapi")
+	script(type="text/javascript").
+		google.load("visualization", "1", {packages:["corechart"]});
+		google.setOnLoadCallback(drawChart);
+		function drawChart() {
+		var data = google.visualization.arrayToDataTable(#{chartData});
+		var options = {
+		title: ''
+		};
+		var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+		chart.draw(data, options);
+		}	
+
+block content
+	h1.
+		Incidents By Zip Code
+	p 
+	table
+		thead
+			tr
+				th(class='col-md-2') Zip Code
+				th(class='col-md-2') Incidents
+				th(class='col-md-2') Percentage
+		tbody
+			each incident, i in incidents
+				tr(class=(i % 2 == 0) ? 'dataTableOdd' : 'dataTableEven')
+					td(class='col-md-2' style='border-left: 1px solid #000;')
+						a(href="#{incident.zipURL}" target="#{incident.zipURLTarget}") #{incident._id}
+					td(class='col-md-2' style='text-align: right;border-left: 1px solid #000;') #{incident.count}
+					td(class='col-md-2' style='text-align: right;border-left: 1px solid #000;border-right: 1px solid #000;') #{incident.percentofTotal}%
+	h6 * Other is either a blank zip code or a zip code outside of Virginia Beach.
+	
+	#piechart(style="width: 900px; height: 500px;")

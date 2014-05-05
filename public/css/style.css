@@ -1,0 +1,9 @@
+tr.dataTableEven {
+  background: #e8e8ff;
+}
+tr.dataTableOdd {
+  background: #eee;
+}
+h5 {
+  color: #999;
+}

@@ -1,0 +1,19 @@
+extends layout
+
+block append head
+	script(src='/scripts/search.js')
+	script(src='/scripts/jquery.autocomplete.min.js')
+	link(rel='stylesheet', href='/css/autocomplete.css')
+block content
+	div.container.jumbotron
+			h1 Virginia Beach Incident Data
+			p
+				| This web site uses incident data aggregated from the City of Virginia Beach
+				| <a href="https://wwws.vbgov.com/ePRO/MainUI/Incidents/IncidentsMain.aspx" target="_blank">electronic Police Reports Online</a>.
+		p
+			| While viewing this data keep in mind that this is <i>incident</i> data, not crime data.  An incident reported to the Virginia Beach Police does
+			| not mean that a crime was commited nor does it mean someone was convicted of a crime.  And don't forget about unreported incidents.
+	div(id="searchfield")
+		form(name="input" action="neighborhood" method="get")
+			input(type="text" name="neighborhood" class="biginput" id="autocomplete" placeholder="Enter a neighborhood (ex: Red Mill Farm)")
+			button(id="flatbtn") Go

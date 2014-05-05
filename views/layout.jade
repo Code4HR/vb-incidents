@@ -1,0 +1,22 @@
+doctype html
+html
+	head
+		block head
+			block title
+				title Virginia Beach Incident Data
+			block meta
+				meta(charset='utf-8')
+				meta(http-equiv='X-UA-Compatible', content='IE=edge')
+			link(rel='stylesheet', href='/css/bootstrap.min.css')
+			| <style>
+			| body { padding-top: 60px; }
+			| </style>
+			script(type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.js')
+			script(type="text/javascript" src='http://code.jquery.com/ui/1.10.4/jquery-ui.js')
+	body
+		include header
+
+		#maincontent.container.theme-showcase
+			block content
+
+		include footer
