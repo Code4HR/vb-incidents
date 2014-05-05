@@ -3,7 +3,7 @@ html
 	head
 		block head
 			block title
-				title Virginia Beach Crime Data
+				title Virginia Beach Incident Data
 			block meta
 				meta(charset='utf-8')
 				meta(http-equiv='X-UA-Compatible', content='IE=edge')
@@ -11,10 +11,12 @@ html
 			| <style>
 			| body { padding-top: 60px; }
 			| </style>
-			script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
+			script(type="text/javascript" src='http://code.jquery.com/jquery-1.10.2.js')
+			script(type="text/javascript" src='http://code.jquery.com/ui/1.10.4/jquery-ui.js')
 	body
 		include header
 
-		block content
+		#maincontent.container.theme-showcase
+			block content
 
 		include footer
